@@ -5,6 +5,8 @@ output:
     keep_md: true
 ---
 
+
+
 1. Code for reading in the dataset and/or processing the data 
 
 
@@ -21,7 +23,7 @@ activity1 <- with(activity,aggregate(steps ~ date, FUN = sum))
 hist(activity1$steps)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](PA1_template_files/figure-htmlunnamed-chunk-3-1.png)<!-- -->
 
 3. Mean and median number of steps taken each day
 
@@ -50,7 +52,7 @@ activity2 <- with(activity,aggregate(steps ~ interval, FUN = mean))
 plot(activity2$interval, activity2$steps, type ='l')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-htmlunnamed-chunk-5-1.png)<!-- -->
 
 5. The 5-minute interval that, on average, contains the maximum number of steps
 
@@ -90,7 +92,7 @@ activity5 <- with(activity4, aggregate(steps ~ date, FUN = sum))
 hist(activity5$steps)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-htmlunnamed-chunk-8-1.png)<!-- -->
 
 ```r
 mean(activity5$steps)
@@ -119,4 +121,4 @@ library(lattice)
 xyplot(activity6$steps~activity6$interval|activity6$day, type = 'l',layout = c(1,2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-htmlunnamed-chunk-9-1.png)<!-- -->
